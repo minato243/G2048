@@ -3,10 +3,10 @@ var res = {
     PlayScene_json: "res/PlayScene.json",
     StartDialog_json:"res/StartDialog.json",
 
-    iconImage: {type: "image", src: "res/menu_scene.png"},
-    iconPlist: {type: "plist", src: "res/menu_scene.plist"},
-    menuImage: {type: "image", src: "res/play_scene.png"},
-    menuPlist: {type: "plist", src: "res/play_scene.plist"},
+    menuImage: {type: "image", src: "res/menu.png"},
+    menuPlist: {type: "plist", src: "res/menu.plist"},
+    playImage: {type: "image", src: "res/play.png"},
+    playPlist: {type: "plist", src: "res/play.plist"},
 
     noMoveSound: "res/sound/No.mp3",
     rightSound: "res/sound/pair.mp3",

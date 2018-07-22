@@ -1,0 +1,518 @@
+{
+  "ID": "fcf7f183-ac5f-4f8e-b7c0-cd18ef3bf848",
+  "Version": "2.3.2.2",
+  "Name": "MenuScene",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 3,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "bg_home.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 360.0,
+              "Y": 640.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "Tag": 4,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "ic_mode_2.png",
+                  "Plist": "menu.plist"
+                },
+                "BlendFunc": {
+                  "Src": 770,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 360.0002,
+                  "Y": 731.9925
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.5719
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 75.0002,
+                "RightMargin": 74.9998,
+                "TopMargin": 261.0075,
+                "BottomMargin": 444.9925,
+                "Tag": 5,
+                "ActionTag": 936794093,
+                "Size": {
+                  "X": 570.0,
+                  "Y": 574.0
+                },
+                "Name": "img_mode",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "bg_menu.png",
+                  "Plist": "menu.plist"
+                },
+                "BlendFunc": {
+                  "Src": 770,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 360.0,
+                  "Y": 380.4778
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.2972
+                },
+                "PreSize": {
+                  "X": 0.8653,
+                  "Y": 0.0508
+                },
+                "LeftMargin": 48.5,
+                "RightMargin": 48.5,
+                "TopMargin": 867.0222,
+                "BottomMargin": 347.9778,
+                "Tag": 6,
+                "Children": [
+                  {
+                    "FontSize": 14,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 65,
+                      "G": 65,
+                      "B": 70
+                    },
+                    "DisabledFileData": {
+                      "Type": "Default",
+                      "Path": "Default/Button_Disable.png",
+                      "Plist": ""
+                    },
+                    "PressedFileData": {
+                      "Type": "PlistSubImage",
+                      "Path": "btn_previous.png",
+                      "Plist": "menu.plist"
+                    },
+                    "NormalFileData": {
+                      "Type": "PlistSubImage",
+                      "Path": "btn_previous.png",
+                      "Plist": "menu.plist"
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 26,
+                    "Scale9Height": 45,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 223.5696,
+                      "Y": 32.5
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.3589,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.0899,
+                      "Y": 1.0308
+                    },
+                    "VerticalEdge": "BothEdge",
+                    "LeftMargin": 195.5696,
+                    "RightMargin": 371.4304,
+                    "TopMargin": -1.0,
+                    "BottomMargin": -1.0,
+                    "Tag": 7,
+                    "ActionTag": -644908833,
+                    "Size": {
+                      "X": 56.0,
+                      "Y": 67.0
+                    },
+                    "Name": "btn_previous",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 14,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 65,
+                      "G": 65,
+                      "B": 70
+                    },
+                    "DisabledFileData": {
+                      "Type": "Default",
+                      "Path": "Default/Button_Disable.png",
+                      "Plist": ""
+                    },
+                    "PressedFileData": {
+                      "Type": "PlistSubImage",
+                      "Path": "btn_next.png",
+                      "Plist": "menu.plist"
+                    },
+                    "NormalFileData": {
+                      "Type": "PlistSubImage",
+                      "Path": "btn_next.png",
+                      "Plist": "menu.plist"
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 26,
+                    "Scale9Height": 45,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 413.9102,
+                      "Y": 32.5
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.6644,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.0899,
+                      "Y": 1.0308
+                    },
+                    "VerticalEdge": "BothEdge",
+                    "LeftMargin": 385.9102,
+                    "RightMargin": 181.0898,
+                    "TopMargin": -1.0,
+                    "BottomMargin": -1.0,
+                    "Tag": 8,
+                    "ActionTag": 239830038,
+                    "Size": {
+                      "X": 56.0,
+                      "Y": 67.0
+                    },
+                    "Name": "btn_next",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "LabelText": "4x4",
+                    "LabelBMFontFile_CNB": {
+                      "Type": "Normal",
+                      "Path": "arial.fnt",
+                      "Plist": ""
+                    },
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 311.5,
+                      "Y": 32.5
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.0546,
+                      "Y": 0.3692
+                    },
+                    "HorizontalEdge": "BothEdge",
+                    "VerticalEdge": "BothEdge",
+                    "LeftMargin": 294.5,
+                    "RightMargin": 294.5,
+                    "TopMargin": 20.5,
+                    "BottomMargin": 20.5,
+                    "Tag": 9,
+                    "ActionTag": -716890884,
+                    "Size": {
+                      "X": 34.0,
+                      "Y": 24.0
+                    },
+                    "Name": "lb_mode",
+                    "ctype": "TextBMFontObjectData"
+                  }
+                ],
+                "ActionTag": -1756606482,
+                "Size": {
+                  "X": 623.0,
+                  "Y": 65.0
+                },
+                "Name": "bg_menu",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "btn_play.png",
+                  "Plist": "menu.plist"
+                },
+                "NormalFileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "btn_play.png",
+                  "Plist": "menu.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 266,
+                "Scale9Height": 71,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 352.8506,
+                  "Y": 262.9117
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.4901,
+                  "Y": 0.2054
+                },
+                "PreSize": {
+                  "X": 0.4111,
+                  "Y": 0.0727
+                },
+                "LeftMargin": 204.8506,
+                "RightMargin": 219.1494,
+                "TopMargin": 970.5883,
+                "BottomMargin": 216.4117,
+                "Tag": 10,
+                "ActionTag": -491948122,
+                "Size": {
+                  "X": 296.0,
+                  "Y": 93.0
+                },
+                "Name": "btn_play",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "btn_high_score.png",
+                  "Plist": "menu.plist"
+                },
+                "NormalFileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "btn_high_score.png",
+                  "Plist": "menu.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 266,
+                "Scale9Height": 71,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 354.9201,
+                  "Y": 149.8319
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.4929,
+                  "Y": 0.1171
+                },
+                "PreSize": {
+                  "X": 0.4111,
+                  "Y": 0.0727
+                },
+                "LeftMargin": 206.9201,
+                "RightMargin": 217.0799,
+                "TopMargin": 1083.6681,
+                "BottomMargin": 103.3319,
+                "Tag": 11,
+                "ActionTag": -486158663,
+                "Size": {
+                  "X": 296.0,
+                  "Y": 93.0
+                },
+                "Name": "btn_high_score",
+                "ctype": "ButtonObjectData"
+              }
+            ],
+            "ActionTag": 1801653668,
+            "Size": {
+              "X": 720.0,
+              "Y": 1280.0
+            },
+            "Name": "bgImage",
+            "ctype": "SpriteObjectData"
+          }
+        ],
+        "Size": {
+          "X": 720.0,
+          "Y": 1280.0
+        },
+        "Name": "Scene",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "arial.fnt",
+        "arial_0.png",
+        "bg_home.png",
+        "Default/Button_Disable.png",
+        "menu.plist",
+        "menu.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Scene"
+}
