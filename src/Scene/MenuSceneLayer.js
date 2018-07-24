@@ -75,7 +75,6 @@ var MenuSceneLayer = cc.Layer.extend({
 
     onNextMode: function(pSender, controlEvent){
         if(controlEvent == ccui.Widget.TOUCH_ENDED){
-            cc.log("onNextMode");
             this.gameData.nextMode();
             this.updateSelectedMode();
         }
@@ -84,7 +83,6 @@ var MenuSceneLayer = cc.Layer.extend({
 
     onPreviousMode: function(pSender, controlEvent){
         if(controlEvent == ccui.Widget.TOUCH_ENDED){
-            cc.log("onNextMode");
             this.gameData.previousButton();
             this.updateSelectedMode();
         }

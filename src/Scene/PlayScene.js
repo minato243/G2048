@@ -17,7 +17,6 @@ var PlayScene = cc.Scene.extend({
     onEnter:function () {
         this._super();
 
-        StartDialog.startDialog();
     },
 
 });

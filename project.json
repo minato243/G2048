@@ -23,6 +23,7 @@
         "src/Base/resource.js",
         "src/Base/SoundManager.js",
         "src/Base/Utility.js",
+        "src/Logic/Board.js",
         "src/Logic/GameDataMgr.js",
         "src/app.js",
         "src/Scene/MenuScene.js",

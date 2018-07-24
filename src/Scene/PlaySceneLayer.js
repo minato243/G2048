@@ -11,14 +11,8 @@
 var PlaySceneLayer = cc.Layer.extend({
 
     bgImage: null,
-    questionLabel: null,
-    answerLabel:[],
-
-    questionBg: null,
-    answerBtn:[],
-
-    dataQuestion: null,
-    gameData: null,
+    bgMode: null,
+    board: null,
 
     ctor:function () {
         //////////////////////////////
@@ -29,67 +23,56 @@ var PlaySceneLayer = cc.Layer.extend({
         this.addChild(layer.node);
 
         this.bgImage = layer.node.getChildByName("bgImage");
-        this.questionBg = this.bgImage.getChildByName("bg_question");
-        var label = this.questionBg.getChildByName("lb_question");
-        label.setVisible(false);
+        this.bgMode = this.bgImage.getChildByName("bg_mode");
 
-        var pos = label.getPosition();
-        this.questionLabel = new cc.LabelBMFont("test case", res.BM_FONT, 200, cc.TEXT_ALIGNMENT_LEFT);
-        this.questionLabel.setAnchorPoint(cc.p(0, 1));
-        this.questionLabel.setPosition(pos);
-        this.questionBg.addChild(this.questionLabel);
-        this.questionLabel.setWidth(360);
-
-        for (var i = 0; i < NUM_ANSWER; i ++){
-            var btn = this.bgImage.getChildByName("btn_answer_"+ (i+1));
-            var label = btn.getChildByName("lb_answer_"+(i+1));
-            this.answerBtn.push(btn);
-            this.answerLabel.push(label);
-
-            btn.setTag(i);
-            btn.addTouchEventListener(this.onAnswer, this);
-        }
-
+        this.initData();
         this.updateData();
+        this.addListener();
 
         return true;
     },
 
-    updateData: function(){
-        this.gameData = GameDataMgr.gameDataMgrInstance;
-        this.dataQuestion = PlatformUtils.getInstance().getQuestion(this.gameData.currentLevel);
-        cc.log("level "+ this.gameData.currentLevel);
-        this.questionLabel.setString(this.dataQuestion.question);
-        var answerArray = this.dataQuestion.getAnswerArr();
-        for (var i = 0; i < NUM_ANSWER; i ++){
-            this.answerLabel[i].setString(answerArray[i]);
-        }
-    },
+    addListener: function(){
+        var self = this;
+        var touchListener = cc.EventListener.create({
+            event: cc.EventListener.TOUCH_ONE_BY_ONE,
+            swallowTouches: true,
+            touchBeganPos:null,
 
-    onAnswer: function(sender, controlEvent){
-        if(controlEvent == ccui.Widget.TOUCH_ENDED){
-            var idx = sender.getTag();
-            cc.log("idx  = " + idx);
-            if(idx +1 == this.dataQuestion.answer){
-                this.nextLevel();
-            } else {
-                this.gameOver();
+            onTouchBegan: function (touch, event) {
+                this.touchBeganPos = touch.getLocation();
+                cc.log("onTouchBegan "+ this.touchBeganPos.x+" "+ this.touchBeganPos.y);
+                return true;
+            },
+
+            onTouchEnded: function (touch, event) {
+                var pos = touch.getLocation();
+                cc.log("onTouchEnded ("+ pos.x+" "+pos.y+"), touchBegan ("+ this.touchBeganPos.x+" "+ this.touchBeganPos.y+")");
+                if(pos.x - this.touchBeganPos.x > 20) self.board.moveRightAndAddNewNumber();
+                else if(pos.x - this.touchBeganPos.x < -20) self.board.moveLeftAndAddNewNumber();
+                else if(pos.y - this.touchBeganPos.y > 20) self.board.moveUpAndAddNewNumber();
+                else if(pos.y - this.touchBeganPos.y < -20) self.board.moveDownAndAddNewNumber();
+
+                cc.log(self.board.getMatrixString());
+                return true;
             }
-        }
+
+        });
+
+        cc.eventManager.addListener(touchListener, this.bgMode);
     },
 
-    nextLevel: function(){
-        cc.log("next level =  " + this.gameData.currentLevel);
-        this.runNextLevelEffect();
+
+    initData: function(){
+        this.gameData = GameDataMgr.gameDataMgrInstance;
+        this.board = new Board(GAME_MATRIX_SIZE[this.gameData.mode]);
+        cc.log(this.board.getMatrixString());
     },
 
-    runNextLevelEffect: function(){
-        this.runNextLevelEffectDone();
-    },
+    updateData: function(){
+        var sprite = cc.Sprite.create("res/bg_mode_"+(this.gameData.mode + 1)+".png");
+        this.bgMode.setSpriteFrame(sprite.getSpriteFrame());
 
-    runNextLevelEffectDone: function(){
-        this.gameData.nextLevel();
-        this.updateData();
     },
 
     gameOver: function(){
