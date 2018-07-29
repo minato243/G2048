@@ -30,6 +30,8 @@
         "src/Scene/MenuSceneLayer.js",
         "src/Scene/PlayScene.js",
         "src/Scene/PlaySceneLayer.js",
-        "src/Scene/ScreenMgr.js"
+        "src/Scene/ScreenMgr.js",
+        "src/View/GameOverDialog.js",
+        "src/View/MessageDialog.js"
     ]
 }

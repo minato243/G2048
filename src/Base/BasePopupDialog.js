@@ -39,6 +39,7 @@ var BasePopupDialog = cc.Layer.extend({
     },
 
     _removeFromParent: function(){
+        cc.log("BasePopupDialog._removeFromParent");
         this.stopAllActions();
         this.removeFromParent(true);
         //ScreenMgr.getInstance().currentScreen.removeChild(this);

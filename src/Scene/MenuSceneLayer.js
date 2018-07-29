@@ -33,8 +33,8 @@ var MenuSceneLayer = cc.Layer.extend({
         this.modeImage = this.bgImage.getChildByName("img_mode");
         this.modeLabel = bgSelect.getChildByName("lb_mode");
 
-        this.playButton.addClickEventListener(this.onPlay);
-        this.highScoreButton.addClickEventListener(this.onHighScore);
+        this.playButton.addTouchEventListener(this.onPlay, this);
+        this.highScoreButton.addTouchEventListener(this.onHighScore, this);
 
         this.initData();
         return true;
@@ -52,28 +52,39 @@ var MenuSceneLayer = cc.Layer.extend({
         cc.log(spriteFrameStr);
         this.modeImage.setSpriteFrame(spriteFrameStr);
 
-        var modeStr = GAME_MATRIX_SIZE[this.gameData.mode]+"X"+GAME_MATRIX_SIZE[this.gameData.mode];
+        var modeStr = GAME_MATRIX_SIZE[this.gameData.mode]+"x"+GAME_MATRIX_SIZE[this.gameData.mode];
         cc.log(modeStr);
         this.modeLabel.setString(modeStr);
     },
 
-    onPlay: function(){
+    onPlay: function(pSender, controlEvent){
         cc.log("onClickPlay");
+
+        Utility.setScaleWhenTouchButton(pSender, controlEvent);
+
+        if(controlEvent != ccui.Widget.TOUCH_ENDED) return;
         SoundManager.playClickSound();
         ScreenMgr.getInstance().changeScreen(PLAY_SCREEN);
     },
 
-    onClickExit: function(){
+    onClickExit: function(pSender, controlEvent){
         cc.log("onClickExit");
+
+        Utility.setScaleWhenTouchButton(pSender, controlEvent);
+        if(controlEvent != ccui.Widget.TOUCH_ENDED) return;
         cc.director.end();
     },
 
-    onHighScore: function(){
+    onHighScore: function(pSender, controlEvent){
         cc.log("onClickHighScore");
 
+        Utility.setScaleWhenTouchButton(pSender, controlEvent);
+        if(controlEvent != ccui.Widget.TOUCH_ENDED) return;
     },
 
     onNextMode: function(pSender, controlEvent){
+        Utility.setScaleWhenTouchButton(pSender, controlEvent);
+
         if(controlEvent == ccui.Widget.TOUCH_ENDED){
             this.gameData.nextMode();
             this.updateSelectedMode();
@@ -82,9 +93,22 @@ var MenuSceneLayer = cc.Layer.extend({
     },
 
     onPreviousMode: function(pSender, controlEvent){
+        Utility.setScaleWhenTouchButton(pSender, controlEvent);
         if(controlEvent == ccui.Widget.TOUCH_ENDED){
-            this.gameData.previousButton();
+            this.gameData.previousMode();
             this.updateSelectedMode();
         }
     }
 });
+
+MenuSceneLayer.menuSceneLayerInstance = null;
+
+MenuSceneLayer.getInstance = function(){
+    if(MenuSceneLayer.menuSceneLayerInstance == null){
+        MenuSceneLayer.menuSceneLayerInstance = new MenuSceneLayer();
+        MenuSceneLayer.menuSceneLayerInstance.retain();
+    }
+
+    return MenuSceneLayer.menuSceneLayerInstance;
+};
+

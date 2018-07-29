@@ -26,20 +26,12 @@ var ScreenMgr = cc.Class.extend({
 
             case PLAY_SCREEN:
             {
-                this.currentScreen = PlayScene.getInstance();
+                this.currentScreen = new PlayScene();
                 cc.log("currentScreen "+ this.currentScreen);
                 cc.director.runScene(new cc.TransitionFade(0.5, this.currentScreen));
                 PlatformUtils.getInstance().hideBanner();
                 break;
             }
-
-            //case MAP_SCREEN:
-            //{
-            //    this.currentScreen = MapScene.getInstance();
-            //    cc.director.runScene(new cc.TransitionFade(0.5, this.currentScreen));
-            //    PlatformUtils.getInstance().hideBanner();
-            //    break;
-            //}
 
             default :
             {

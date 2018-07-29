@@ -9,15 +9,20 @@ var PlayScene = cc.Scene.extend({
     ctor: function(){
         this._super();
         this.playLayer = null;
+    },
+
+    onEnter:function () {
+        cc.log("PlayScene.onEnter");
+        this._super();
 
         this.playLayer = new PlaySceneLayer();
         this.addChild(this.playLayer);
     },
 
-    onEnter:function () {
+    onExit: function(){
+        cc.log("PlayScene.onExit");
         this._super();
-
-    },
+    }
 
 });
 

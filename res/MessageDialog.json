@@ -1,0 +1,319 @@
+{
+  "ID": "88992ef7-c0a1-4f51-9b26-d8ede591f3db",
+  "Version": "2.3.2.2",
+  "Name": "MessageDialog",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 23,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "bg_shadow.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 360.0,
+              "Y": 640.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "Tag": 25,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "bg_dialog.png",
+                  "Plist": "play.plist"
+                },
+                "BlendFunc": {
+                  "Src": 770,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 372.668,
+                  "Y": 626.4097
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5176,
+                  "Y": 0.4894
+                },
+                "PreSize": {
+                  "X": 0.6472,
+                  "Y": 0.1844
+                },
+                "LeftMargin": 139.668,
+                "RightMargin": 114.332,
+                "TopMargin": 535.5903,
+                "BottomMargin": 508.4097,
+                "Tag": 24,
+                "Children": [
+                  {
+                    "LabelText": "Continue the last one",
+                    "LabelBMFontFile_CNB": {
+                      "Type": "Normal",
+                      "Path": "BRLNSB_56.fnt",
+                      "Plist": ""
+                    },
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 228.9593,
+                      "Y": 154.0637
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.4913,
+                      "Y": 0.6528
+                    },
+                    "PreSize": {
+                      "X": 1.0429,
+                      "Y": 0.2373
+                    },
+                    "LeftMargin": -14.0407,
+                    "RightMargin": -5.9593,
+                    "TopMargin": 53.9363,
+                    "BottomMargin": 126.0637,
+                    "Tag": 26,
+                    "ActionTag": 859947844,
+                    "Size": {
+                      "X": 486.0,
+                      "Y": 56.0
+                    },
+                    "Name": "lb_message",
+                    "ctype": "TextBMFontObjectData"
+                  }
+                ],
+                "ActionTag": -571284412,
+                "Size": {
+                  "X": 466.0,
+                  "Y": 236.0
+                },
+                "Name": "bg_message",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "btn_no.png",
+                  "Plist": "play.plist"
+                },
+                "NormalFileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "btn_no.png",
+                  "Plist": "play.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 127,
+                "Scale9Height": 53,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 262.9214,
+                  "Y": 466.4753
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.3652,
+                  "Y": 0.3644
+                },
+                "PreSize": {
+                  "X": 0.2181,
+                  "Y": 0.0586
+                },
+                "LeftMargin": 184.4214,
+                "RightMargin": 378.5786,
+                "TopMargin": 776.0247,
+                "BottomMargin": 428.9753,
+                "Tag": 27,
+                "ActionTag": 2135343062,
+                "Size": {
+                  "X": 157.0,
+                  "Y": 75.0
+                },
+                "Name": "btn_no",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "btn_yes.png",
+                  "Plist": "play.plist"
+                },
+                "NormalFileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "btn_yes.png",
+                  "Plist": "play.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 127,
+                "Scale9Height": 53,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 459.5092,
+                  "Y": 466.963
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.6382,
+                  "Y": 0.3648
+                },
+                "PreSize": {
+                  "X": 0.2181,
+                  "Y": 0.0586
+                },
+                "LeftMargin": 381.0092,
+                "RightMargin": 181.9908,
+                "TopMargin": 775.537,
+                "BottomMargin": 429.463,
+                "Tag": 28,
+                "ActionTag": -2114047752,
+                "Size": {
+                  "X": 157.0,
+                  "Y": 75.0
+                },
+                "Name": "btn_yes",
+                "ctype": "ButtonObjectData"
+              }
+            ],
+            "ActionTag": 1534455298,
+            "Size": {
+              "X": 720.0,
+              "Y": 1280.0
+            },
+            "Name": "bgImage",
+            "ctype": "SpriteObjectData"
+          }
+        ],
+        "Size": {
+          "X": 720.0,
+          "Y": 1280.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "bg_shadow.png",
+        "BRLNSB_56.fnt",
+        "BRLNSB_56_0.png",
+        "Default/Button_Disable.png",
+        "play.plist",
+        "play.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Layer"
+}

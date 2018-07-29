@@ -287,7 +287,7 @@
                     "LabelText": "4x4",
                     "LabelBMFontFile_CNB": {
                       "Type": "Normal",
-                      "Path": "arial.fnt",
+                      "Path": "BRLNSB_60.fnt",
                       "Plist": ""
                     },
                     "AnchorPoint": {
@@ -309,20 +309,20 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.0546,
-                      "Y": 0.3692
+                      "X": 0.1348,
+                      "Y": 0.9231
                     },
                     "HorizontalEdge": "BothEdge",
                     "VerticalEdge": "BothEdge",
-                    "LeftMargin": 294.5,
-                    "RightMargin": 294.5,
-                    "TopMargin": 20.5,
-                    "BottomMargin": 20.5,
+                    "LeftMargin": 269.5,
+                    "RightMargin": 269.5,
+                    "TopMargin": 2.5,
+                    "BottomMargin": 2.5,
                     "Tag": 9,
                     "ActionTag": -716890884,
                     "Size": {
-                      "X": 34.0,
-                      "Y": 24.0
+                      "X": 84.0,
+                      "Y": 60.0
                     },
                     "Name": "lb_mode",
                     "ctype": "TextBMFontObjectData"
@@ -504,9 +504,9 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
-        "arial.fnt",
-        "arial_0.png",
         "bg_home.png",
+        "BRLNSB_60.fnt",
+        "BRLNSB_60_0.png",
         "Default/Button_Disable.png",
         "menu.plist",
         "menu.png"
