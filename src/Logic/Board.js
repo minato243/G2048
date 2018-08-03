@@ -108,7 +108,13 @@ var Board = cc.Class.extend({
             this.addNewNumber();
     },
 
+    moveAndAddNewNumber: function(dir){
+        if(this.move(dir))
+            this.addNewNumber()
+    },
+
     move: function(direct){
+        cc.log("move "+direct);
         var tmp = this.oldMatrix;
         this.cloneMatrix();
         cc.log("old matrix "+ this.getOldMatrixString());
