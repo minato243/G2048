@@ -60,7 +60,12 @@ public class AndroidUtils {
 
     public static void signIn(){
         Log.d(TAG,"signIn");
-        AndroidUtils.instance.signInSilently();
+        if(AndroidUtils.instance.isSignedIn()){
+            AndroidUtils.instance.signInSilently();
+        } else{
+            AndroidUtils.instance.startSignInIntent();
+        }
+
     }
 
     public static void rateMyApp(){
@@ -251,6 +256,7 @@ public class AndroidUtils {
     private boolean isSignedIn()
     {
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(ac);
+        Log.d(TAG, "isSignedIn " + account == null ?"false":"true"+", account ="+ account);
         if(account != null) return true;
         return false;
     }
