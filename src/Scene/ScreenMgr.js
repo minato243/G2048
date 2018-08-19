@@ -6,6 +6,7 @@ var ScreenMgr = cc.Class.extend({
    },
 
    changeScreen: function(screenId){
+       PlatformUtils.getInstance().showInterstitialAd();
         switch (screenId){
 
             case LOADING_SCREEN:
@@ -18,8 +19,7 @@ var ScreenMgr = cc.Class.extend({
             case MENU_SCREEN:
             {
                 this.currentScreen = new MenuScene();
-                cc.director.runScene(new cc.TransitionFade(0.5, this.currentScreen));
-                PlatformUtils.getInstance().initBanner();
+                cc.director.runScene(new cc.TransitionFade(0.125, this.currentScreen));
                 PlatformUtils.getInstance().showBanner();
                 break;
             }
@@ -29,7 +29,7 @@ var ScreenMgr = cc.Class.extend({
                 this.currentScreen = new PlayScene();
                 cc.log("currentScreen "+ this.currentScreen);
                 cc.director.runScene(new cc.TransitionFade(0.5, this.currentScreen));
-                PlatformUtils.getInstance().hideBanner();
+                PlatformUtils.getInstance().showBanner();
                 break;
             }
 
@@ -39,9 +39,12 @@ var ScreenMgr = cc.Class.extend({
             }
         }
 
-
-
+        return this.currentScreen;
    },
+
+    setCurrentScreen: function(screen){
+        this.currentScreen = screen;
+    }
 
 });
 

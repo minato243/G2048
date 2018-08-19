@@ -14,6 +14,8 @@ var Board = cc.Class.extend({
     score: 0,
     isCanUndo: false,
 
+    mergePosList:[],
+
     ctor: function (size) {
         this.size = size;
     },
@@ -56,9 +58,9 @@ var Board = cc.Class.extend({
     addNewNumber: function () {
         var pos = this.getEmptyPos();
         cc.log("addNewNumber [" + pos.x + " " + pos.y + "]");
-        if (pos.x == -1 && pos.y == -1) return false;
+        if (pos.x == -1 && pos.y == -1) return pos;
         this.matrix[pos.x][pos.y] = 2;
-        return true;
+        return pos;
     },
 
     createRandomPos: function () {
@@ -88,36 +90,19 @@ var Board = cc.Class.extend({
         return this.emptyList[r];
     },
 
-    moveLeftAndAddNewNumber: function () {
-        if (this.move(LEFT))
-            this.addNewNumber();
-    },
-
-    moveRightAndAddNewNumber: function () {
-        if (this.move(RIGHT))
-            this.addNewNumber();
-    },
-
-    moveUpAndAddNewNumber: function () {
-        if (this.move(UP))
-            this.addNewNumber();
-    },
-
-    moveDownAndAddNewNumber: function () {
-        if (this.move(DOWN))
-            this.addNewNumber();
-    },
-
     moveAndAddNewNumber: function(dir){
-        if(this.move(dir))
-            this.addNewNumber()
+        if(this.move(dir)){
+            return this.addNewNumber();
+        }
+        return null;
     },
 
     move: function(direct){
-        cc.log("move "+direct);
+        //cc.log("move "+direct);
         var tmp = this.oldMatrix;
         this.cloneMatrix();
-        cc.log("old matrix "+ this.getOldMatrixString());
+        //cc.log("old matrix "+ this.getOldMatrixString());
+        this.mergePosList = [];
 
         var hasMoved = false;
         switch (direct){
@@ -157,6 +142,7 @@ var Board = cc.Class.extend({
                         if (this.matrix[i][k] != undefined && this.matrix[i][k] != 0) {
                             this.matrix[i][j] = this.matrix[i][k];
                             this.matrix[i][k] = 0;
+                            //this.removeFromMergePosList(cc.p(i,k));
                             hasMoved = true;
                             break;
                         }
@@ -168,6 +154,7 @@ var Board = cc.Class.extend({
                             if(this.matrix[i][k] == this.matrix[i][j]) {
                                 this.matrix[i][j] += this.matrix[i][k];
                                 this.matrix[i][k] = 0;
+                                this.addToMergePosList(cc.p(i,j));
                                 this.addScore(this.matrix[i][j]);
                                 hasMoved = true;
                             }
@@ -193,6 +180,7 @@ var Board = cc.Class.extend({
                         if (this.matrix[i][k] != undefined && this.matrix[i][k] != 0) {
                             this.matrix[i][j] = this.matrix[i][k];
                             this.matrix[i][k] = 0;
+                            //this.removeFromMergePosList(cc.p(i,k));
                             hasMoved = true;
                             break;
                         }
@@ -205,6 +193,7 @@ var Board = cc.Class.extend({
                                 this.matrix[i][j] += this.matrix[i][k];
                                 this.matrix[i][k] = 0;
                                 this.addScore(this.matrix[i][j]);
+                                this.addToMergePosList(cc.p(i,j));
                                 hasMoved = true;
                             }
                             break;
@@ -243,6 +232,7 @@ var Board = cc.Class.extend({
                                 this.matrix[i][j] += this.matrix[k][j];
                                 this.matrix[k][j] = 0;
                                 this.addScore(this.matrix[i][j]);
+                                this.addToMergePosList(cc.p(i,j));
                                 hasMoved = true;
                             }
                             break;
@@ -279,6 +269,7 @@ var Board = cc.Class.extend({
                                 this.matrix[i][j] += this.matrix[k][j];
                                 this.matrix[k][j] = 0;
                                 this.addScore(this.matrix[i][j]);
+                                this.addToMergePosList(cc.p(i,j));
                                 hasMoved = true;
                             }
                             break;
@@ -353,14 +344,23 @@ var Board = cc.Class.extend({
     canMove: function () {
         for (var i = 0; i < this.size; i++) {
             for (var j = 0; j < this.size; j++) {
-                if (this.matrix[i][j] == 0) return true;
+                if (this.matrix[i][j] == 0) {
+                    cc.log("can move at"+i +" "+ j);
+                    return true;
+                }
             }
         }
 
         for (i = 0; i < this.size; i++) {
             for (j = 0; j < this.size; j++) {
-                if(j+1 < this.size && this.matrix[i][j] == this.matrix[i][j+1]) return true;
-                if(i+1 < this.size && this.matrix[i][j] == this.matrix[i+1][j]) return true;
+                if(j+1 < this.size && this.matrix[i][j] == this.matrix[i][j+1]) {
+                    cc.log("can move right"+i +" "+ j);
+                    return true;
+                }
+                if(i+1 < this.size && this.matrix[i][j] == this.matrix[i+1][j]) {
+                    cc.log("can move down "+i +" "+ j);
+                    return true;
+                }
             }
         }
 
@@ -421,11 +421,11 @@ var Board = cc.Class.extend({
             }
 
             this.oldMatrix = [];
-            var dataArray = dataOldMatrixStr.split(".");
-            for (var i = 0; i< dataArray.length; i ++){
+            dataArray = dataOldMatrixStr.split(".");
+            for (i = 0; i< dataArray.length; i ++){
                 this.oldMatrix.push([]);
-                var data = dataArray[i].split(",");
-                for (var j= 0; j < data.length; j ++ ){
+                data = dataArray[i].split(",");
+                for (j= 0; j < data.length; j ++ ){
                     this.oldMatrix[i][j] = parseInt(data[j]);
                 }
             }
@@ -434,6 +434,25 @@ var Board = cc.Class.extend({
         }
 
         cc.log("convertDataFromString matrix ="+ this.getMatrixString());
+    },
+
+    addToMergePosList: function(pos){
+        this.mergePosList.push(pos);
+    },
+
+    removeFromMergePosList: function(pos){
+        var n = this.mergePosList.length;
+        var isExist =false;
+        for (var i = 0; i < n; i ++){
+            var p = this.mergePosList[i];
+            if(p.x == pos.x && p.y == pos.y){
+                isExist = true;
+                break;
+            }
+        }
+
+        if(isExist) this.mergePosList.splice(i,1);
+
     }
 
 });

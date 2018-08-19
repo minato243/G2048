@@ -7,7 +7,7 @@ var PlatformUtils = cc.Class.extend({
     },
 
     shareMyApp: function(){
-        this.callAndroidFunction(PlatformUtils.CLASS_DEFAULT,"shareMyApp","()V");
+        //this.callAndroidFunction(PlatformUtils.CLASS_DEFAULT,"shareMyApp","()V");
     },
 
     rateApp: function(){
@@ -15,7 +15,7 @@ var PlatformUtils = cc.Class.extend({
     },
 
     showHighScore: function(){
-        this.callAndroidFunction(PlatformUtils.CLASS_DEFAULT, "showRanking","()V");
+        this.callAndroidFunction(PlatformUtils.CLASS_DEFAULT, "showAllRanking","()V");
     },
 
     updateScore: function(score){
@@ -42,6 +42,12 @@ var PlatformUtils = cc.Class.extend({
         this.callAndroidFunction(PlatformUtils.CLASS_DEFAULT, "hideBanner", "()V");
     },
 
+    updateLeaderBoard: function(mode, score){
+        cc.log("PlatformUtils.updateLeaderBoard mode = "+ mode + "score = "+ score);
+        if(sys.platform ==  sys.WIN32) return;
+        jsb.reflection.callStaticMethod(PlatformUtils.CLASS_DEFAULT, "updateLeaderBoard","(II)V", mode, score);
+    },
+
     callAndroidFunction: function(className, methodName, methodSignature, parameters){
         if(sys.platform ==  sys.WIN32) return;
         var returnValue;
@@ -57,44 +63,7 @@ var PlatformUtils = cc.Class.extend({
             playScene.layer.updateCoin();
             playScene.layer.showAddGoldEffect(num);
         }
-    },
-
-    getQuestion: function(level){
-        if(sys.platform == sys.WIN32){
-            cc.log("WIN 32");
-            var question = this.createSampleQuestion(level);
-            return question;
-        } else {
-            var result = this.callAndroidFunction(PlatformUtils.CLASS_DEFAULT, "getQuestion", "(I)Ljava/lang/String");
-        }
-
-        return question;
-    },
-
-    createSampleQuestion: function(level){
-        var question = new QuestionEntity();
-        if(level % 2 == 1){
-            question.question = Utility.decodeString("#Nắu!up!dồ!dộ/Uiídi!màn!ohiệ!tĩ/!Lép!oiị!đên!ohàz#!mà!dpo!hì@");
-            question.answer1 = "Con dế";
-            question.answer2 = "Con trâu";
-            cc.log("char code" + question.answer2.charCodeAt(6));
-            question.answer3 = "Con ngựa";
-            question.answer4 = "Con bò";
-            cc.log("char code" + question.answer4.charCodeAt(5));
-            question.answer = 1;
-        } else {
-            question.question = Utility.decodeString("Đâv!mà!uêo!dủb!nộu!mpạj!cìoi!oướd!oóoh@");
-            question.answer1 = "Coca-cola";
-            question.answer2 = "Joven";
-            question.answer3 = "7 up";
-            question.answer4 = "Chinsu";
-            question.answer = 2;
-        }
-
-        return question;
-    },
-
-
+    }
 
 });
 
@@ -114,7 +83,7 @@ PlatformUtils.destroyInstance = function(){
     }
 };
 
-PlatformUtils.CLASS_DEFAULT = "com.biggame.pikachu.AndroidUtils";
+PlatformUtils.CLASS_DEFAULT = "com.anhnt.g2048.AndroidUtils";
 utf8Decode = function(utf8String) {
     if (typeof utf8String != 'string') throw new TypeError('parameter ‘utf8String’ is not a string');
     // note: decode 3-byte chars first as decoded 2-byte strings could appear to be 3-byte char!

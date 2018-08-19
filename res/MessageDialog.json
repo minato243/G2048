@@ -152,19 +152,19 @@
                 },
                 "PressedFileData": {
                   "Type": "PlistSubImage",
-                  "Path": "btn_no.png",
+                  "Path": "bg_btn.png",
                   "Plist": "play.plist"
                 },
                 "NormalFileData": {
                   "Type": "PlistSubImage",
-                  "Path": "btn_no.png",
+                  "Path": "bg_btn.png",
                   "Plist": "play.plist"
                 },
                 "Scale9Enable": true,
                 "Scale9OriginX": 15,
                 "Scale9OriginY": 11,
-                "Scale9Width": 127,
-                "Scale9Height": 53,
+                "Scale9Width": 130,
+                "Scale9Height": 56,
                 "OutlineColor": {
                   "G": 0,
                   "B": 0
@@ -196,20 +196,66 @@
                   "Y": 0.3644
                 },
                 "PreSize": {
-                  "X": 0.2181,
-                  "Y": 0.0586
+                  "X": 0.2222,
+                  "Y": 0.0609
                 },
-                "LeftMargin": 184.4214,
-                "RightMargin": 378.5786,
-                "TopMargin": 776.0247,
-                "BottomMargin": 428.9753,
+                "LeftMargin": 182.9214,
+                "RightMargin": 377.0786,
+                "TopMargin": 774.5247,
+                "BottomMargin": 427.4753,
                 "Tag": 27,
+                "Children": [
+                  {
+                    "LabelText": "Cancel",
+                    "LabelBMFontFile_CNB": {
+                      "Type": "Normal",
+                      "Path": "BRLNSB_48_outlight.fnt",
+                      "Plist": ""
+                    },
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 80.0,
+                      "Y": 39.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.5938,
+                      "Y": 0.6154
+                    },
+                    "HorizontalEdge": "BothEdge",
+                    "VerticalEdge": "BothEdge",
+                    "LeftMargin": 32.5,
+                    "RightMargin": 32.5,
+                    "TopMargin": 15.0,
+                    "BottomMargin": 15.0,
+                    "Tag": 20,
+                    "ActionTag": -698409138,
+                    "Size": {
+                      "X": 95.0,
+                      "Y": 48.0
+                    },
+                    "Name": "lb_cancel",
+                    "ctype": "TextBMFontObjectData"
+                  }
+                ],
                 "ActionTag": 2135343062,
                 "Size": {
-                  "X": 157.0,
-                  "Y": 75.0
+                  "X": 160.0,
+                  "Y": 78.0
                 },
-                "Name": "btn_no",
+                "Name": "btn_cancel",
                 "ctype": "ButtonObjectData"
               },
               {
@@ -227,19 +273,19 @@
                 },
                 "PressedFileData": {
                   "Type": "PlistSubImage",
-                  "Path": "btn_yes.png",
+                  "Path": "bg_btn.png",
                   "Plist": "play.plist"
                 },
                 "NormalFileData": {
                   "Type": "PlistSubImage",
-                  "Path": "btn_yes.png",
+                  "Path": "bg_btn.png",
                   "Plist": "play.plist"
                 },
                 "Scale9Enable": true,
                 "Scale9OriginX": 15,
                 "Scale9OriginY": 11,
-                "Scale9Width": 127,
-                "Scale9Height": 53,
+                "Scale9Width": 130,
+                "Scale9Height": 56,
                 "OutlineColor": {
                   "G": 0,
                   "B": 0
@@ -271,20 +317,66 @@
                   "Y": 0.3648
                 },
                 "PreSize": {
-                  "X": 0.2181,
-                  "Y": 0.0586
+                  "X": 0.2222,
+                  "Y": 0.0609
                 },
-                "LeftMargin": 381.0092,
-                "RightMargin": 181.9908,
-                "TopMargin": 775.537,
-                "BottomMargin": 429.463,
+                "LeftMargin": 379.5092,
+                "RightMargin": 180.4908,
+                "TopMargin": 774.037,
+                "BottomMargin": 427.963,
                 "Tag": 28,
+                "Children": [
+                  {
+                    "LabelText": "Restart",
+                    "LabelBMFontFile_CNB": {
+                      "Type": "Normal",
+                      "Path": "BRLNSB_48_outlight.fnt",
+                      "Plist": ""
+                    },
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 80.0,
+                      "Y": 39.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.7,
+                      "Y": 0.6154
+                    },
+                    "HorizontalEdge": "BothEdge",
+                    "VerticalEdge": "BothEdge",
+                    "LeftMargin": 24.0,
+                    "RightMargin": 24.0,
+                    "TopMargin": 15.0,
+                    "BottomMargin": 15.0,
+                    "Tag": 21,
+                    "ActionTag": 1143570473,
+                    "Size": {
+                      "X": 112.0,
+                      "Y": 48.0
+                    },
+                    "Name": "lb_accept",
+                    "ctype": "TextBMFontObjectData"
+                  }
+                ],
                 "ActionTag": -2114047752,
                 "Size": {
-                  "X": 157.0,
-                  "Y": 75.0
+                  "X": 160.0,
+                  "Y": 78.0
                 },
-                "Name": "btn_yes",
+                "Name": "btn_accept",
                 "ctype": "ButtonObjectData"
               }
             ],
@@ -306,6 +398,8 @@
       },
       "UsedResources": [
         "bg_shadow.png",
+        "BRLNSB_48_outlight.fnt",
+        "BRLNSB_48_outlight_0.png",
         "BRLNSB_56.fnt",
         "BRLNSB_56_0.png",
         "Default/Button_Disable.png",

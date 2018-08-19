@@ -1,10 +1,4 @@
-/**
- * Created by thaod on 7/29/2018.
- */
-
-/**
- * Created by thaod on 12/27/2017.
- */
+/**Created by thaod on 7/29/2018.*/
 
 var MessageDialog = BasePopupDialog.extend({
     callBackFunc: null,
@@ -34,16 +28,17 @@ var MessageDialog = BasePopupDialog.extend({
         var bgMessage = bgImage.getChildByName("bg_message");
         messageLabel.setString("");
 
-        this.acceptButton = bgImage.getChildByName("btn_yes");
+        this.acceptButton = bgImage.getChildByName("btn_accept");
         this.acceptButton.addTouchEventListener(this.onAcceptClick, this);
-        this.cancelButton = bgImage.getChildByName("btn_no");
+        this.cancelButton = bgImage.getChildByName("btn_cancel");
         this.cancelButton.addTouchEventListener(this.onCancelClick, this);
 
-        //this.acceptLabel = this.acceptButton.getChildByName("lb_accept");
-        //this.cancelLabel = this.cancelButton.getChildByName("lb_cancel");
+        this.acceptLabel = this.acceptButton.getChildByName("lb_accept");
+        this.cancelLabel = this.cancelButton.getChildByName("lb_cancel");
 
         this.messageLabel = new cc.LabelBMFont("", res.FONT_BRL_48, bgMessage.getContentSize().width *90/100, cc.TEXT_ALIGNMENT_CENTER);
         messageLabel.getParent().addChild(this.messageLabel);
+
         this.messageLabel.setPosition(messageLabel.getPosition());
     },
 
@@ -55,11 +50,6 @@ var MessageDialog = BasePopupDialog.extend({
         this.messageLabel.setString(message);
 
         if(this.getParent() != null) return;
-        cc.log("acceptButton "+ this.acceptButton);
-        //this.acceptButton = this.bgImage.getChildByName("btn_yes");
-        //this.acceptButton.addTouchEventListener(this.onAcceptClick, this);
-        //this.cancelButton.addTouchEventListener(this.onCancelClick, this);
-
         ScreenMgr.getInstance().currentScreen.addChild(this, LAYER_DIALOG);
     },
 
@@ -100,6 +90,7 @@ var MessageDialog = BasePopupDialog.extend({
             } else {
                 cc.log("acceptCallBack = null");
             }
+
             this.closeDialog();
         }
     },

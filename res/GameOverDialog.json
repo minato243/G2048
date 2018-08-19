@@ -102,8 +102,8 @@
                       "Y": 154.0637
                     },
                     "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
+                      "ScaleX": 0.7,
+                      "ScaleY": 0.7
                     },
                     "CColor": {
                       "B": 0
@@ -124,7 +124,7 @@
                     "Tag": 32,
                     "ActionTag": 1739835273,
                     "Size": {
-                      "X": 205.0,
+                      "X": 283.0,
                       "Y": 48.0
                     },
                     "Name": "lb_new_record",
@@ -143,7 +143,7 @@
                     },
                     "Position": {
                       "X": 233.0,
-                      "Y": 205.0
+                      "Y": 198.9999
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -153,7 +153,7 @@
                     "IconVisible": false,
                     "PrePosition": {
                       "X": 0.5,
-                      "Y": 0.8686
+                      "Y": 0.8432
                     },
                     "PreSize": {
                       "X": 0.6996,
@@ -161,8 +161,8 @@
                     },
                     "LeftMargin": 70.0,
                     "RightMargin": 70.0,
-                    "TopMargin": 1.0,
-                    "BottomMargin": 175.0,
+                    "TopMargin": 7.0001,
+                    "BottomMargin": 168.9999,
                     "Tag": 35,
                     "ActionTag": 1597895472,
                     "Size": {
@@ -185,30 +185,30 @@
                     },
                     "Position": {
                       "X": 192.3786,
-                      "Y": 102.9072
+                      "Y": 98.9072
                     },
                     "Scale": {
-                      "ScaleX": 0.8,
-                      "ScaleY": 1.0
+                      "ScaleX": 0.6,
+                      "ScaleY": 0.6
                     },
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
                       "X": 0.4128,
-                      "Y": 0.436
+                      "Y": 0.4191
                     },
                     "PreSize": {
                       "X": 0.4421,
                       "Y": 0.2034
                     },
-                    "LeftMargin": -18.6214,
-                    "RightMargin": 62.6214,
-                    "TopMargin": 109.0928,
-                    "BottomMargin": 78.9072,
+                    "LeftMargin": -76.6214,
+                    "RightMargin": 4.6214,
+                    "TopMargin": 113.0928,
+                    "BottomMargin": 74.9072,
                     "Tag": 36,
                     "ActionTag": -746168910,
                     "Size": {
-                      "X": 422.0,
+                      "X": 538.0,
                       "Y": 48.0
                     },
                     "Name": "lb_message",
@@ -250,7 +250,7 @@
                     "Tag": 37,
                     "ActionTag": -1592209568,
                     "Size": {
-                      "X": 103.0,
+                      "X": 136.0,
                       "Y": 48.0
                     },
                     "Name": "lb_score",
@@ -271,8 +271,8 @@
                       "Y": 99.9685
                     },
                     "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
+                      "ScaleX": 0.8,
+                      "ScaleY": 0.8
                     },
                     "CColor": {
                       "B": 0
@@ -293,7 +293,7 @@
                     "Tag": 38,
                     "ActionTag": 610334108,
                     "Size": {
-                      "X": 54.0,
+                      "X": 66.0,
                       "Y": 48.0
                     },
                     "Name": "lb_number",
@@ -323,19 +323,19 @@
                 },
                 "PressedFileData": {
                   "Type": "PlistSubImage",
-                  "Path": "btn_menu.png",
+                  "Path": "bg_btn.png",
                   "Plist": "play.plist"
                 },
                 "NormalFileData": {
                   "Type": "PlistSubImage",
-                  "Path": "btn_menu.png",
+                  "Path": "bg_btn.png",
                   "Plist": "play.plist"
                 },
                 "Scale9Enable": true,
                 "Scale9OriginX": 15,
                 "Scale9OriginY": 11,
-                "Scale9Width": 127,
-                "Scale9Height": 53,
+                "Scale9Width": 130,
+                "Scale9Height": 56,
                 "OutlineColor": {
                   "G": 0,
                   "B": 0
@@ -367,20 +367,66 @@
                   "Y": 0.3644
                 },
                 "PreSize": {
-                  "X": 0.2181,
-                  "Y": 0.0586
+                  "X": 0.2222,
+                  "Y": 0.0609
                 },
-                "LeftMargin": 184.4214,
-                "RightMargin": 378.5786,
-                "TopMargin": 776.0247,
-                "BottomMargin": 428.9753,
-                "Tag": 33,
-                "ActionTag": -1410938636,
+                "LeftMargin": 182.9214,
+                "RightMargin": 377.0786,
+                "TopMargin": 774.5247,
+                "BottomMargin": 427.4753,
+                "Tag": 31,
+                "Children": [
+                  {
+                    "LabelText": "MENU",
+                    "LabelBMFontFile_CNB": {
+                      "Type": "Normal",
+                      "Path": "BRLNSB_48_outlight.fnt",
+                      "Plist": ""
+                    },
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 80.0,
+                      "Y": 39.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.5938,
+                      "Y": 0.6154
+                    },
+                    "HorizontalEdge": "BothEdge",
+                    "VerticalEdge": "BothEdge",
+                    "LeftMargin": 32.5,
+                    "RightMargin": 32.5,
+                    "TopMargin": 15.0,
+                    "BottomMargin": 15.0,
+                    "Tag": 32,
+                    "ActionTag": 718722768,
+                    "Size": {
+                      "X": 89.0,
+                      "Y": 48.0
+                    },
+                    "Name": "lb_cancel",
+                    "ctype": "TextBMFontObjectData"
+                  }
+                ],
+                "ActionTag": 160248829,
                 "Size": {
-                  "X": 157.0,
-                  "Y": 75.0
+                  "X": 160.0,
+                  "Y": 78.0
                 },
-                "Name": "btn_no",
+                "Name": "btn_cancel",
                 "ctype": "ButtonObjectData"
               },
               {
@@ -398,19 +444,19 @@
                 },
                 "PressedFileData": {
                   "Type": "PlistSubImage",
-                  "Path": "btn_new_game.png",
+                  "Path": "bg_btn.png",
                   "Plist": "play.plist"
                 },
                 "NormalFileData": {
                   "Type": "PlistSubImage",
-                  "Path": "btn_new_game.png",
+                  "Path": "bg_btn.png",
                   "Plist": "play.plist"
                 },
                 "Scale9Enable": true,
                 "Scale9OriginX": 15,
                 "Scale9OriginY": 11,
-                "Scale9Width": 127,
-                "Scale9Height": 53,
+                "Scale9Width": 130,
+                "Scale9Height": 56,
                 "OutlineColor": {
                   "G": 0,
                   "B": 0
@@ -442,20 +488,66 @@
                   "Y": 0.3648
                 },
                 "PreSize": {
-                  "X": 0.2181,
-                  "Y": 0.0586
+                  "X": 0.2222,
+                  "Y": 0.0609
                 },
-                "LeftMargin": 381.0092,
-                "RightMargin": 181.9908,
-                "TopMargin": 775.537,
-                "BottomMargin": 429.463,
-                "Tag": 34,
-                "ActionTag": -1473973954,
+                "LeftMargin": 379.5092,
+                "RightMargin": 180.4908,
+                "TopMargin": 774.037,
+                "BottomMargin": 427.963,
+                "Tag": 33,
+                "Children": [
+                  {
+                    "LabelText": "RESTART",
+                    "LabelBMFontFile_CNB": {
+                      "Type": "Normal",
+                      "Path": "BRLNSB_48_outlight.fnt",
+                      "Plist": ""
+                    },
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 80.0,
+                      "Y": 39.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.7,
+                      "Y": 0.6154
+                    },
+                    "HorizontalEdge": "BothEdge",
+                    "VerticalEdge": "BothEdge",
+                    "LeftMargin": 24.0,
+                    "RightMargin": 24.0,
+                    "TopMargin": 15.0,
+                    "BottomMargin": 15.0,
+                    "Tag": 34,
+                    "ActionTag": -680991884,
+                    "Size": {
+                      "X": 132.0,
+                      "Y": 48.0
+                    },
+                    "Name": "lb_accept",
+                    "ctype": "TextBMFontObjectData"
+                  }
+                ],
+                "ActionTag": -477468191,
                 "Size": {
-                  "X": 157.0,
-                  "Y": 75.0
+                  "X": 160.0,
+                  "Y": 78.0
                 },
-                "Name": "btn_yes",
+                "Name": "btn_accept",
                 "ctype": "ButtonObjectData"
               }
             ],
@@ -479,6 +571,8 @@
         "bg_shadow.png",
         "BRLNSB_48.fnt",
         "BRLNSB_48_0.png",
+        "BRLNSB_48_outlight.fnt",
+        "BRLNSB_48_outlight_0.png",
         "BRLNSB_60.fnt",
         "BRLNSB_60_0.png",
         "Default/Button_Disable.png",

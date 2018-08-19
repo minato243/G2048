@@ -14,9 +14,9 @@ var PlayScene = cc.Scene.extend({
     onEnter:function () {
         cc.log("PlayScene.onEnter");
         this._super();
-
         this.playLayer = new PlaySceneLayer();
         this.addChild(this.playLayer);
+        this.playLayer.initData();
     },
 
     onExit: function(){

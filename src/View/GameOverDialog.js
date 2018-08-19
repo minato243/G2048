@@ -19,7 +19,7 @@ var GameOverDialog = BasePopupDialog.extend({
     playLayer: null,
 
     ctor: function(){
-        cc.log("new message dialog");
+        cc.log("new GameOverDialog");
         this._super();
         var layer = ccs.load(res.GameOverDialog_json);
         this.addChild(layer.node);
@@ -30,9 +30,9 @@ var GameOverDialog = BasePopupDialog.extend({
         this.numberLabel = bgMessage.getChildByName("lb_number");
         this.newRecordLabel = bgMessage.getChildByName("lb_new_record");
 
-        this.acceptButton = bgImage.getChildByName("btn_yes");
+        this.acceptButton = bgImage.getChildByName("btn_accept");
         this.acceptButton.addTouchEventListener(this.onAcceptClick, this);
-        this.cancelButton = bgImage.getChildByName("btn_no");
+        this.cancelButton = bgImage.getChildByName("btn_cancel");
         this.cancelButton.addTouchEventListener(this.onCancelClick, this);
 
     },

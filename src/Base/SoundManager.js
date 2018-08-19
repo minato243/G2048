@@ -45,36 +45,13 @@ SoundManager.getInstance = function(){
     return SoundManager.instance;
 };
 
-SoundManager.playRightSound = function(){
-    SoundManager.getInstance().playSound(res.rightSound);
-};
-
-SoundManager.playWrongSound = function(){
-    SoundManager.getInstance().playSound(res.wrongSound);
-};
-
 SoundManager.playClickSound = function(){
     SoundManager.getInstance().playSound(res.clickSound);
 };
 
-SoundManager.playWonSound = function(){
-    SoundManager.getInstance().playSound(res.wonSound);
-};
-
-SoundManager.playLostSound = function(){
-    SoundManager.getInstance().playSound(res.lostSound);
-};
-
-SoundManager.playBackgroundMusic = function(){
-    SoundManager.getInstance().playMusic(res.bgMusic);
-};
-
-SoundManager.playLevelSound = function(){
-    SoundManager.getInstance().playSound(res.levelSound);
-};
-
-SoundManager.playNoMoveSound = function(){
-    SoundManager.getInstance().playSound(res.noMoveSound);
+SoundManager.playMoveSound = function(){
+    cc.log("playMoveSound");
+    SoundManager.instance.playSound(res.pingPongSound);
 };
 
 SoundManager.pauseMusic = function(){

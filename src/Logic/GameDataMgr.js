@@ -8,7 +8,7 @@ var HIGH_SCORE_KEY = "game_high_score";
 var GameDataMgr = cc.Class.extend({
     mode: 1,
     currentLevel: 0,
-    highScore: 2048,
+    highScore: 0,
     usedUndo: false,
 
     ctor: function(){
@@ -43,10 +43,14 @@ var GameDataMgr = cc.Class.extend({
         GameDataMgr.saveCache(GAME_DATA_KEY+mode.toString(), dataStr);
     },
 
-    updateHighScore: function(mode, score){
+    saveHighScore: function(){
+        GameDataMgr.saveCache(HIGH_SCORE_KEY+this.mode, this.highScore);
+    },
+
+    updateHighScore: function(score){
         if(score > this.highScore){
             this.highScore = score;
-            GameDataMgr.getCache(HIGH_SCORE_KEY+mode, this.highScore);
+            this.saveHighScore();
         }
     },
 

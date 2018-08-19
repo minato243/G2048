@@ -16,6 +16,13 @@ var MenuSceneLayer = cc.Layer.extend({
         // 1. super init first
         this._super();
 
+        this.initGui();
+        this.addKeyBoardListener();
+        this.initData();
+        return true;
+    },
+
+    initGui: function(){
         var menuScene = ccs.load(res.MenuScene_json);
         this.addChild(menuScene.node, 1);
 
@@ -36,13 +43,37 @@ var MenuSceneLayer = cc.Layer.extend({
         this.playButton.addTouchEventListener(this.onPlay, this);
         this.highScoreButton.addTouchEventListener(this.onHighScore, this);
 
-        this.initData();
-        return true;
+        this.homeButton = this.bgImage.getChildByName("btn_home");
+        this.soundOnButton = this.bgImage.getChildByName("btn_sound_on");
+        this.soundOffButton = this.bgImage.getChildByName("btn_sound_off");
+        this.homeButton.addTouchEventListener(this.onClickHome, this);
+        this.soundOnButton.addTouchEventListener(this.onSoundOn, this);
+        this.soundOffButton.addTouchEventListener(this.onSoundOff, this);
+    },
+
+    addKeyBoardListener: function(){
+        var self = this;
+        var keyboardListener = cc.EventListener.create({
+            event: cc.EventListener.KEYBOARD,
+            onKeyPressed:  function(keyCode, event){
+                cc.log("MenuSceneLayer.addKeyBoardListener keyCode = "+keyCode);
+                if(keyCode == cc.KEY.backspace || keyCode == cc.KEY.back){
+                    self.onBackPress();
+                }else if(keyCode == cc.KEY.home){
+                    //do something
+                }
+            }
+        });
+
+        cc.eventManager.addListener(keyboardListener, this.bgImage);
     },
 
     initData: function(){
         this.gameData = GameDataMgr.gameDataMgrInstance;
+        SoundManager.getInstance();
         this.updateSelectedMode();
+        this.soundOnButton.setVisible(SoundManager.instance.status);
+        this.soundOffButton.setVisible(!SoundManager.instance.status);
     },
 
     updateSelectedMode: function(){
@@ -72,20 +103,24 @@ var MenuSceneLayer = cc.Layer.extend({
 
         Utility.setScaleWhenTouchButton(pSender, controlEvent);
         if(controlEvent != ccui.Widget.TOUCH_ENDED) return;
+        SoundManager.playClickSound();
         cc.director.end();
     },
 
     onHighScore: function(pSender, controlEvent){
         cc.log("onClickHighScore");
-
         Utility.setScaleWhenTouchButton(pSender, controlEvent);
-        if(controlEvent != ccui.Widget.TOUCH_ENDED) return;
+        if(controlEvent == ccui.Widget.TOUCH_ENDED){
+            SoundManager.playClickSound();
+            PlatformUtils.getInstance().showHighScore();
+        }
     },
 
     onNextMode: function(pSender, controlEvent){
         Utility.setScaleWhenTouchButton(pSender, controlEvent);
 
         if(controlEvent == ccui.Widget.TOUCH_ENDED){
+            SoundManager.playClickSound();
             this.gameData.nextMode();
             this.updateSelectedMode();
         }
@@ -95,9 +130,56 @@ var MenuSceneLayer = cc.Layer.extend({
     onPreviousMode: function(pSender, controlEvent){
         Utility.setScaleWhenTouchButton(pSender, controlEvent);
         if(controlEvent == ccui.Widget.TOUCH_ENDED){
+            SoundManager.playClickSound();
             this.gameData.previousMode();
             this.updateSelectedMode();
         }
+    },
+
+    onBackPress: function(){
+        cc.log("onBackPress");
+        this.acceptCallBack = cc.callFunc(this.doBackPress, this);
+        MessageDialog.destroyInstance();
+        var dialog = MessageDialog.getInstance();
+        dialog.startDialog(this.acceptCallBack, null, "Are you sure want to quit this game?");
+        dialog.setAcceptLabel("Quit");
+        dialog.setCancelLabel("Cancel");
+    },
+
+    onClickHome: function (pSender, controlEvent) {
+        cc.log("onHome");
+        Utility.setScaleWhenTouchButton(pSender, controlEvent);
+
+        if (controlEvent == ccui.Widget.TOUCH_ENDED) {
+            SoundManager.playClickSound();
+            this.onBackPress();
+        }
+    },
+
+    onSoundOn: function (pSender, controlEvent) {
+        cc.log("onSoundOn");
+        Utility.setScaleWhenTouchButton(pSender, controlEvent);
+        if (controlEvent == ccui.Widget.TOUCH_ENDED) {
+            SoundManager.playClickSound();
+            SoundManager.instance.setMusicOff();
+            this.soundOffButton.setVisible(true);
+            this.soundOnButton.setVisible(false);
+        }
+    },
+
+    onSoundOff: function (pSender, controlEvent) {
+        Utility.setScaleWhenTouchButton(pSender, controlEvent);
+        if (controlEvent == ccui.Widget.TOUCH_ENDED) {
+            SoundManager.playClickSound();
+            SoundManager.instance.setMusicOn();
+            this.soundOffButton.setVisible(false);
+            this.soundOnButton.setVisible(true);
+        }
+    },
+
+    doBackPress: function(){
+        cc.log("doBackPress");
+        cc.director.end();
     }
 });
 

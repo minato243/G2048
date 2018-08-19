@@ -485,6 +485,231 @@
                 },
                 "Name": "btn_high_score",
                 "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "btn_home.png",
+                  "Plist": "play.plist"
+                },
+                "NormalFileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "btn_home.png",
+                  "Plist": "play.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 41,
+                "Scale9Height": 49,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 43.3002,
+                  "Y": 1233.4219
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0601,
+                  "Y": 0.9636
+                },
+                "PreSize": {
+                  "X": 0.0986,
+                  "Y": 0.0555
+                },
+                "LeftMargin": 7.8002,
+                "RightMargin": 641.1998,
+                "TopMargin": 11.0781,
+                "BottomMargin": 1197.9219,
+                "Tag": 40,
+                "ActionTag": -1294703058,
+                "Size": {
+                  "X": 71.0,
+                  "Y": 71.0
+                },
+                "Name": "btn_home",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "btn_sound_on.png",
+                  "Plist": "play.plist"
+                },
+                "NormalFileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "btn_sound_on.png",
+                  "Plist": "play.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 41,
+                "Scale9Height": 49,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 675.9143,
+                  "Y": 1235.275
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.9388,
+                  "Y": 0.9651
+                },
+                "PreSize": {
+                  "X": 0.0986,
+                  "Y": 0.0555
+                },
+                "LeftMargin": 640.4143,
+                "RightMargin": 8.5857,
+                "TopMargin": 9.225,
+                "BottomMargin": 1199.775,
+                "Tag": 41,
+                "ActionTag": -22041405,
+                "Size": {
+                  "X": 71.0,
+                  "Y": 71.0
+                },
+                "Name": "btn_sound_on",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "btn_sound_off.png",
+                  "Plist": "play.plist"
+                },
+                "NormalFileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "btn_sound_off.png",
+                  "Plist": "play.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 41,
+                "Scale9Height": 49,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 676.55,
+                  "Y": 1237.2118
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.9397,
+                  "Y": 0.9666
+                },
+                "PreSize": {
+                  "X": 0.0986,
+                  "Y": 0.0555
+                },
+                "LeftMargin": 641.05,
+                "RightMargin": 7.95,
+                "TopMargin": 7.2882,
+                "BottomMargin": 1201.7118,
+                "Tag": 42,
+                "ActionTag": 1186327173,
+                "Size": {
+                  "X": 71.0,
+                  "Y": 71.0
+                },
+                "Name": "btn_sound_off",
+                "ctype": "ButtonObjectData"
               }
             ],
             "ActionTag": 1801653668,
@@ -509,7 +734,9 @@
         "BRLNSB_60_0.png",
         "Default/Button_Disable.png",
         "menu.plist",
-        "menu.png"
+        "menu.png",
+        "play.plist",
+        "play.png"
       ],
       "ctype": "GameProjectData"
     }
